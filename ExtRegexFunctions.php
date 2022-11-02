@@ -171,7 +171,10 @@ class ExtRegexFunctions {
 					return $matches[$backRefs[1]];
 				}
 
-				if ( $backRefs[2] !== '' && array_key_exists( $backRefs[2], $matches ) ) {
+				if (
+					isset( $backRefs[2] ) &&
+					$backRefs[2] !== '' &&
+					array_key_exists( $backRefs[2], $matches ) ) {
 					return $matches[$backRefs[2]];
 				}
 
